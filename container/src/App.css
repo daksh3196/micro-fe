@@ -6,4 +6,6 @@
 .header-item{
     font-size: 24px;
     font-weight: 400;
+    pointer-events: all;
+    cursor: pointer;
 }

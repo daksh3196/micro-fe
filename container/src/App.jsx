@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import Products from 'products/Products';
 import ProductPage from './ProductPage';
 import { Grid } from "@mui/material";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './Home';
 
 import "./index.css";
 import "./App.css";
@@ -15,33 +17,12 @@ const App = () => {
   }
   return(
     <div className="container">
-      <Grid
-        className="header-container"
-        container
-        direction="row"
-        justifyContent="flex-end"
-        alignItems="center"
-        gap={2}
-      >
-        <Grid item className="header-item" onClick={routeProducts}>Products</Grid>
-        <Grid item className="header-item">Cart</Grid>
-        <Grid item className="header-item">Login</Grid>
-      </Grid>
-      <Grid
-        className="content-main"
-        container
-        direction="column"
-        justifyContent="flex-start"
-        alignItems="flex-start"
-        gap={2}
-      >
-        <Grid item>
-          Welcome to E-Commerce Application
-        </Grid>
-        <Grid item>
-          <Products />
-        </Grid>
-      </Grid>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route exact path="/products" element={<Products />}></Route>
+        </Routes>
+      </Router>
     </div>
   )
 };

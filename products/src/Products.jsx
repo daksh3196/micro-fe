@@ -5,7 +5,7 @@ import Footer from './Footer';
 import "./index.css";
 
 
-const Products = () => {
+const Products = ({ sample }) => {
     var products = [];
   const generateProducts = () => {
     for (let i =0; i< 10;i++){
@@ -25,7 +25,6 @@ const Products = () => {
       })
     }
     </div>
-    <Footer />
   </div>
   );
 }
