@@ -18,9 +18,10 @@ const Header = () => {
         alignItems="center"
         gap={2}
       >
+        <Grid item className="header-item" onClick= { () => history('/') }>Home</Grid>
         <Grid item className="header-item" onClick= { () => history('/products') }>Products</Grid>
-        <Grid item className="header-item" onClick= { () => history('/products') }>Cart</Grid>
-        <Grid item className="header-item" onClick= { () => history('/products') }>Products</Grid>
+        <Grid item className="header-item" onClick= { () => history('/cart') }>Cart</Grid>
+        <Grid item className="header-item" onClick= { () => history('/combine') }>Combine Both!</Grid>
       </Grid>
     </div>
   )
